@@ -1,0 +1,197 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'Decoder_1:Decoder1|instrC[3]'
+Slack : -10.041
+TNS   : -78.140
+
+Type  : Slow 1200mV 85C Model Setup 'Logic_in[11]'
+Slack : -3.121
+TNS   : -31.372
+
+Type  : Slow 1200mV 85C Model Setup 'Logic_exe'
+Slack : -0.075
+TNS   : -0.237
+
+Type  : Slow 1200mV 85C Model Setup 'Logic_in[0]'
+Slack : 0.928
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Logic_in[11]'
+Slack : -2.689
+TNS   : -6.720
+
+Type  : Slow 1200mV 85C Model Hold 'Logic_in[0]'
+Slack : -1.247
+TNS   : -18.471
+
+Type  : Slow 1200mV 85C Model Hold 'Logic_exe'
+Slack : 0.424
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Decoder_1:Decoder1|instrC[3]'
+Slack : 1.376
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'Logic_in[11]'
+Slack : -1.836
+TNS   : -4.522
+
+Type  : Slow 1200mV 85C Model Recovery 'Logic_in[0]'
+Slack : -0.796
+TNS   : -0.796
+
+Type  : Slow 1200mV 85C Model Removal 'Logic_in[11]'
+Slack : -1.055
+TNS   : -2.574
+
+Type  : Slow 1200mV 85C Model Removal 'Logic_in[0]'
+Slack : -0.757
+TNS   : -0.757
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Logic_in[11]'
+Slack : -3.000
+TNS   : -32.348
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Logic_in[0]'
+Slack : -3.000
+TNS   : -19.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Logic_exe'
+Slack : -3.000
+TNS   : -11.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Decoder_1:Decoder1|instrC[3]'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'Decoder_1:Decoder1|instrC[3]'
+Slack : -8.986
+TNS   : -70.000
+
+Type  : Slow 1200mV 0C Model Setup 'Logic_in[11]'
+Slack : -2.757
+TNS   : -26.992
+
+Type  : Slow 1200mV 0C Model Setup 'Logic_exe'
+Slack : 0.045
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'Logic_in[0]'
+Slack : 0.965
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Logic_in[11]'
+Slack : -2.362
+TNS   : -5.313
+
+Type  : Slow 1200mV 0C Model Hold 'Logic_in[0]'
+Slack : -1.116
+TNS   : -15.855
+
+Type  : Slow 1200mV 0C Model Hold 'Logic_exe'
+Slack : 0.363
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Decoder_1:Decoder1|instrC[3]'
+Slack : 1.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'Logic_in[11]'
+Slack : -1.529
+TNS   : -3.819
+
+Type  : Slow 1200mV 0C Model Recovery 'Logic_in[0]'
+Slack : -0.714
+TNS   : -0.714
+
+Type  : Slow 1200mV 0C Model Removal 'Logic_in[11]'
+Slack : -0.961
+TNS   : -2.310
+
+Type  : Slow 1200mV 0C Model Removal 'Logic_in[0]'
+Slack : -0.674
+TNS   : -0.674
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Logic_in[11]'
+Slack : -3.000
+TNS   : -29.142
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Logic_in[0]'
+Slack : -3.000
+TNS   : -19.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Logic_exe'
+Slack : -3.000
+TNS   : -11.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Decoder_1:Decoder1|instrC[3]'
+Slack : 0.460
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'Decoder_1:Decoder1|instrC[3]'
+Slack : -5.743
+TNS   : -44.664
+
+Type  : Fast 1200mV 0C Model Setup 'Logic_in[11]'
+Slack : -1.860
+TNS   : -19.295
+
+Type  : Fast 1200mV 0C Model Setup 'Logic_exe'
+Slack : 0.382
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'Logic_in[0]'
+Slack : 0.762
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Logic_in[11]'
+Slack : -1.635
+TNS   : -5.080
+
+Type  : Fast 1200mV 0C Model Hold 'Logic_in[0]'
+Slack : -0.835
+TNS   : -12.061
+
+Type  : Fast 1200mV 0C Model Hold 'Logic_exe'
+Slack : 0.199
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Decoder_1:Decoder1|instrC[3]'
+Slack : 0.595
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'Logic_in[11]'
+Slack : -1.248
+TNS   : -2.423
+
+Type  : Fast 1200mV 0C Model Recovery 'Logic_in[0]'
+Slack : 0.183
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'Logic_in[11]'
+Slack : -0.607
+TNS   : -1.496
+
+Type  : Fast 1200mV 0C Model Removal 'Logic_in[0]'
+Slack : -0.517
+TNS   : -0.517
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Logic_in[11]'
+Slack : -3.000
+TNS   : -33.681
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Logic_in[0]'
+Slack : -3.000
+TNS   : -20.370
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Logic_exe'
+Slack : -3.000
+TNS   : -11.216
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Decoder_1:Decoder1|instrC[3]'
+Slack : 0.461
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -1,0 +1,632 @@
+Analysis & Synthesis report for Logic
+Sun Apr 28 12:42:43 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Port Connectivity Checks: "Add_number:AddSubnum|oneBitAdder:Bit7"
+ 12. Port Connectivity Checks: "Adder:AddSub|oneBitAdder:Bit7"
+ 13. Port Connectivity Checks: "AddOne:Add1|oneBitAdder:Bit7"
+ 14. Port Connectivity Checks: "AddOne:Add1|oneBitAdder:Bit0"
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Apr 28 12:42:43 2019           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; Logic                                           ;
+; Top-level Entity Name              ; Logic                                           ;
+; Family                             ; Cyclone IV GX                                   ;
+; Total logic elements               ; 240                                             ;
+;     Total combinational functions  ; 224                                             ;
+;     Dedicated logic registers      ; 24                                              ;
+; Total registers                    ; 24                                              ;
+; Total pins                         ; 56                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total GXB Receiver Channel PCS     ; 0                                               ;
+; Total GXB Receiver Channel PMA     ; 0                                               ;
+; Total GXB Transmitter Channel PCS  ; 0                                               ;
+; Total GXB Transmitter Channel PMA  ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; Logic              ; Logic              ;
+; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                    ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                             ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
+; Logic.vhd                        ; yes             ; User VHDL File  ; C:/Users/shylo/Desktop/Logic Design Final Project/Logic.vhd              ;         ;
+; Reg.vhd                          ; yes             ; User VHDL File  ; C:/Users/shylo/Desktop/Logic Design Final Project/Reg.vhd                ;         ;
+; Decoder_1.vhd                    ; yes             ; User VHDL File  ; C:/Users/shylo/Desktop/Logic Design Final Project/Decoder_1.vhd          ;         ;
+; Multiplexor.vhd                  ; yes             ; User VHDL File  ; C:/Users/shylo/Desktop/Logic Design Final Project/Multiplexor.vhd        ;         ;
+; regEnable.vhd                    ; yes             ; User VHDL File  ; C:/Users/shylo/Desktop/Logic Design Final Project/regEnable.vhd          ;         ;
+; moveImm.vhd                      ; yes             ; User VHDL File  ; C:/Users/shylo/Desktop/Logic Design Final Project/moveImm.vhd            ;         ;
+; Adder.vhd                        ; yes             ; User VHDL File  ; C:/Users/shylo/Desktop/Logic Design Final Project/Adder.vhd              ;         ;
+; oneBitAdder.vhd                  ; yes             ; User VHDL File  ; C:/Users/shylo/Desktop/Logic Design Final Project/oneBitAdder.vhd        ;         ;
+; bitInverter.vhd                  ; yes             ; User VHDL File  ; C:/Users/shylo/Desktop/Logic Design Final Project/bitInverter.vhd        ;         ;
+; EOR.vhd                          ; yes             ; User VHDL File  ; C:/Users/shylo/Desktop/Logic Design Final Project/EOR.vhd                ;         ;
+; And_reg.vhd                      ; yes             ; User VHDL File  ; C:/Users/shylo/Desktop/Logic Design Final Project/And_reg.vhd            ;         ;
+; Display.vhd                      ; yes             ; User VHDL File  ; C:/Users/shylo/Desktop/Logic Design Final Project/Display.vhd            ;         ;
+; Add_number.vhd                   ; yes             ; User VHDL File  ; C:/Users/shylo/Desktop/Logic Design Final Project/Add_number.vhd         ;         ;
+; bitInverter_number.vhd           ; yes             ; User VHDL File  ; C:/Users/shylo/Desktop/Logic Design Final Project/bitInverter_number.vhd ;         ;
+; left_shift.vhd                   ; yes             ; User VHDL File  ; C:/Users/shylo/Desktop/Logic Design Final Project/left_shift.vhd         ;         ;
+; right_shift.vhd                  ; yes             ; User VHDL File  ; C:/Users/shylo/Desktop/Logic Design Final Project/right_shift.vhd        ;         ;
+; AddOne.vhd                       ; yes             ; User VHDL File  ; C:/Users/shylo/Desktop/Logic Design Final Project/AddOne.vhd             ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++--------------------------+--------------------------+
+; Resource                 ; Usage                    ;
++--------------------------+--------------------------+
+; I/O pins                 ; 56                       ;
+; DSP block 9-bit elements ; 0                        ;
+; Maximum fan-out node     ; Decoder_1:Decoder1|isSub ;
+; Maximum fan-out          ; 44                       ;
+; Total fan-out            ; 915                      ;
+; Average fan-out          ; 2.54                     ;
++--------------------------+--------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                       ;
++-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------+--------------+
+; Compilation Hierarchy Node          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                          ; Library Name ;
++-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------+--------------+
+; |Logic                              ; 224 (0)           ; 24 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 56   ; 0            ; |Logic                                       ; work         ;
+;    |AddOne:Add1|                    ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Logic|AddOne:Add1                           ; work         ;
+;       |oneBitAdder:Bit1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Logic|AddOne:Add1|oneBitAdder:Bit1          ; work         ;
+;       |oneBitAdder:Bit2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Logic|AddOne:Add1|oneBitAdder:Bit2          ; work         ;
+;       |oneBitAdder:Bit3|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Logic|AddOne:Add1|oneBitAdder:Bit3          ; work         ;
+;       |oneBitAdder:Bit4|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Logic|AddOne:Add1|oneBitAdder:Bit4          ; work         ;
+;       |oneBitAdder:Bit5|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Logic|AddOne:Add1|oneBitAdder:Bit5          ; work         ;
+;       |oneBitAdder:Bit6|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Logic|AddOne:Add1|oneBitAdder:Bit6          ; work         ;
+;    |Add_number:AddSubnum|           ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Logic|Add_number:AddSubnum                  ; work         ;
+;       |oneBitAdder:Bit0|            ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Logic|Add_number:AddSubnum|oneBitAdder:Bit0 ; work         ;
+;       |oneBitAdder:Bit1|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Logic|Add_number:AddSubnum|oneBitAdder:Bit1 ; work         ;
+;       |oneBitAdder:Bit2|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Logic|Add_number:AddSubnum|oneBitAdder:Bit2 ; work         ;
+;       |oneBitAdder:Bit3|            ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Logic|Add_number:AddSubnum|oneBitAdder:Bit3 ; work         ;
+;    |Adder:AddSub|                   ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Logic|Adder:AddSub                          ; work         ;
+;       |oneBitAdder:Bit0|            ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Logic|Adder:AddSub|oneBitAdder:Bit0         ; work         ;
+;    |And_reg:And1|                   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Logic|And_reg:And1                          ; work         ;
+;    |Decoder_1:Decoder1|             ; 53 (53)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Logic|Decoder_1:Decoder1                    ; work         ;
+;    |Display:Disp|                   ; 23 (23)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Logic|Display:Disp                          ; work         ;
+;    |EOR:Reg_XoR|                    ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Logic|EOR:Reg_XoR                           ; work         ;
+;    |Multiplexor:Mux|                ; 52 (52)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Logic|Multiplexor:Mux                       ; work         ;
+;    |Reg:reg0|                       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Logic|Reg:reg0                              ; work         ;
+;    |Reg:reg1|                       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Logic|Reg:reg1                              ; work         ;
+;    |Reg:reg2T|                      ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Logic|Reg:reg2T                             ; work         ;
+;    |bitInverter:toInvert|           ; 40 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Logic|bitInverter:toInvert                  ; work         ;
+;    |bitInverter_number:toInvertnum| ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Logic|bitInverter_number:toInvertnum        ; work         ;
+;    |regEnable:regEN|                ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Logic|regEnable:regEN                       ; work         ;
++-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                         ;
++-----------------------------------------------------+------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal          ; Free of Timing Hazards ;
++-----------------------------------------------------+------------------------------+------------------------+
+; Decoder_1:Decoder1|instrC[3]                        ; Decoder_1:Decoder1|instrC[3] ; yes                    ;
+; Decoder_1:Decoder1|instrC[2]                        ; Decoder_1:Decoder1|instrC[3] ; yes                    ;
+; Decoder_1:Decoder1|instrC[1]                        ; Decoder_1:Decoder1|instrC[3] ; yes                    ;
+; Decoder_1:Decoder1|instrC[0]                        ; Decoder_1:Decoder1|instrC[3] ; yes                    ;
+; regEnable:regEN|reg0                                ; VCC                          ; yes                    ;
+; regEnable:regEN|reg1                                ; VCC                          ; yes                    ;
+; Multiplexor:Mux|currAns[0]                          ; Decoder_1:Decoder1|instrC[3] ; yes                    ;
+; Multiplexor:Mux|currAns[1]                          ; Decoder_1:Decoder1|instrC[3] ; yes                    ;
+; Multiplexor:Mux|currAns[2]                          ; Decoder_1:Decoder1|instrC[3] ; yes                    ;
+; Multiplexor:Mux|currAns[3]                          ; Decoder_1:Decoder1|instrC[3] ; yes                    ;
+; Multiplexor:Mux|currAns[4]                          ; Decoder_1:Decoder1|instrC[3] ; yes                    ;
+; Multiplexor:Mux|currAns[5]                          ; Decoder_1:Decoder1|instrC[3] ; yes                    ;
+; Multiplexor:Mux|currAns[6]                          ; Decoder_1:Decoder1|instrC[3] ; yes                    ;
+; Multiplexor:Mux|currAns[7]                          ; Decoder_1:Decoder1|instrC[3] ; yes                    ;
+; bitInverter:toInvert|invert_out[0]                  ; Decoder_1:Decoder1|isSub     ; yes                    ;
+; Decoder_1:Decoder1|Rs2                              ; GND                          ; yes                    ;
+; bitInverter:toInvert|invertedV[0]                   ; Decoder_1:Decoder1|isSub     ; yes                    ;
+; Decoder_1:Decoder1|isSub                            ; Decoder_1:Decoder1|isSub     ; yes                    ;
+; Decoder_1:Decoder1|imm[0]                           ; Decoder_1:Decoder1|Equal0    ; yes                    ;
+; Decoder_1:Decoder1|Rs1                              ; Decoder_1:Decoder1|Rs1       ; yes                    ;
+; bitInverter:toInvert|invert_out[1]                  ; Decoder_1:Decoder1|isSub     ; yes                    ;
+; Decoder_1:Decoder1|imm[1]                           ; Decoder_1:Decoder1|Equal0    ; yes                    ;
+; bitInverter:toInvert|invertedV[1]                   ; Decoder_1:Decoder1|isSub     ; yes                    ;
+; bitInverter:toInvert|invert_out[2]                  ; Decoder_1:Decoder1|isSub     ; yes                    ;
+; Decoder_1:Decoder1|imm[2]                           ; Decoder_1:Decoder1|Equal0    ; yes                    ;
+; bitInverter:toInvert|invertedV[2]                   ; Decoder_1:Decoder1|isSub     ; yes                    ;
+; bitInverter:toInvert|invert_out[3]                  ; Decoder_1:Decoder1|isSub     ; yes                    ;
+; Decoder_1:Decoder1|imm[3]                           ; Decoder_1:Decoder1|Equal0    ; yes                    ;
+; bitInverter:toInvert|invertedV[3]                   ; Decoder_1:Decoder1|isSub     ; yes                    ;
+; bitInverter:toInvert|invert_out[4]                  ; Decoder_1:Decoder1|isSub     ; yes                    ;
+; Decoder_1:Decoder1|imm[4]                           ; Decoder_1:Decoder1|Equal0    ; yes                    ;
+; bitInverter:toInvert|invertedV[4]                   ; Decoder_1:Decoder1|isSub     ; yes                    ;
+; bitInverter:toInvert|invert_out[5]                  ; Decoder_1:Decoder1|isSub     ; yes                    ;
+; Decoder_1:Decoder1|imm[5]                           ; Decoder_1:Decoder1|Equal0    ; yes                    ;
+; bitInverter:toInvert|invertedV[5]                   ; Decoder_1:Decoder1|isSub     ; yes                    ;
+; bitInverter:toInvert|invert_out[6]                  ; Decoder_1:Decoder1|isSub     ; yes                    ;
+; Decoder_1:Decoder1|imm[6]                           ; Decoder_1:Decoder1|Equal0    ; yes                    ;
+; bitInverter:toInvert|invertedV[6]                   ; Decoder_1:Decoder1|isSub     ; yes                    ;
+; bitInverter:toInvert|invertedV[7]                   ; Decoder_1:Decoder1|isSub     ; yes                    ;
+; bitInverter:toInvert|invert_out[7]                  ; Decoder_1:Decoder1|isSub     ; yes                    ;
+; Decoder_1:Decoder1|imm[7]                           ; Decoder_1:Decoder1|Equal0    ; yes                    ;
+; Number of user-specified and inferred latches = 41  ;                              ;                        ;
++-----------------------------------------------------+------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 24    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Logic|bitInverter:toInvert|reg1_valout[5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Logic|bitInverter:toInvert|reg0_valout[4] ;
+; 8:1                ; 6 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |Logic|Multiplexor:Mux|currAns[3]          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Add_number:AddSubnum|oneBitAdder:Bit7"                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Adder:AddSub|oneBitAdder:Bit7"                                                      ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "AddOne:Add1|oneBitAdder:Bit7"                                                       ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "AddOne:Add1|oneBitAdder:Bit0" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; cin  ; Input ; Info     ; Stuck at VCC                   ;
++------+-------+----------+--------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Apr 28 12:42:40 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Logic -c Logic
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file logic.vhd
+    Info (12022): Found design unit 1: Logic-Blogic
+    Info (12023): Found entity 1: Logic
+Info (12021): Found 2 design units, including 1 entities, in source file reg.vhd
+    Info (12022): Found design unit 1: Reg-BReg
+    Info (12023): Found entity 1: Reg
+Info (12021): Found 2 design units, including 1 entities, in source file decoder_1.vhd
+    Info (12022): Found design unit 1: Decoder_1-rtl
+    Info (12023): Found entity 1: Decoder_1
+Info (12021): Found 2 design units, including 1 entities, in source file multiplexor.vhd
+    Info (12022): Found design unit 1: Multiplexor-rtl
+    Info (12023): Found entity 1: Multiplexor
+Info (12021): Found 2 design units, including 1 entities, in source file regenable.vhd
+    Info (12022): Found design unit 1: regEnable-rtl
+    Info (12023): Found entity 1: regEnable
+Info (12021): Found 2 design units, including 1 entities, in source file moveimm.vhd
+    Info (12022): Found design unit 1: moveImm-rtl
+    Info (12023): Found entity 1: moveImm
+Info (12021): Found 2 design units, including 1 entities, in source file adder.vhd
+    Info (12022): Found design unit 1: Adder-rt1
+    Info (12023): Found entity 1: Adder
+Info (12021): Found 2 design units, including 1 entities, in source file onebitadder.vhd
+    Info (12022): Found design unit 1: oneBitAdder-rt1
+    Info (12023): Found entity 1: oneBitAdder
+Info (12021): Found 2 design units, including 1 entities, in source file bitinverter.vhd
+    Info (12022): Found design unit 1: bitInverter-rtl
+    Info (12023): Found entity 1: bitInverter
+Info (12021): Found 2 design units, including 1 entities, in source file eor.vhd
+    Info (12022): Found design unit 1: EOR-rtl
+    Info (12023): Found entity 1: EOR
+Info (12021): Found 2 design units, including 1 entities, in source file and_reg.vhd
+    Info (12022): Found design unit 1: And_reg-rtl
+    Info (12023): Found entity 1: And_reg
+Info (12021): Found 2 design units, including 1 entities, in source file display.vhd
+    Info (12022): Found design unit 1: Display-rtl
+    Info (12023): Found entity 1: Display
+Info (12021): Found 2 design units, including 1 entities, in source file add_number.vhd
+    Info (12022): Found design unit 1: Add_number-rt1
+    Info (12023): Found entity 1: Add_number
+Info (12021): Found 2 design units, including 1 entities, in source file bitinverter_number.vhd
+    Info (12022): Found design unit 1: bitInverter_number-rtl
+    Info (12023): Found entity 1: bitInverter_number
+Info (12021): Found 2 design units, including 1 entities, in source file left_shift.vhd
+    Info (12022): Found design unit 1: left_shift-behave
+    Info (12023): Found entity 1: left_shift
+Info (12021): Found 2 design units, including 1 entities, in source file right_shift.vhd
+    Info (12022): Found design unit 1: right_shift-behave
+    Info (12023): Found entity 1: right_shift
+Info (12021): Found 2 design units, including 1 entities, in source file addone.vhd
+    Info (12022): Found design unit 1: AddOne-rt1
+    Info (12023): Found entity 1: AddOne
+Info (12127): Elaborating entity "Logic" for the top level hierarchy
+Info (12128): Elaborating entity "Decoder_1" for hierarchy "Decoder_1:Decoder1"
+Warning (10036): Verilog HDL or VHDL warning at Decoder_1.vhd(29): object "reg_from1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Decoder_1.vhd(29): object "reg_from2" assigned a value but never read
+Warning (10631): VHDL Process Statement warning at Decoder_1.vhd(37): inferring latch(es) for signal or variable "imm", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Decoder_1.vhd(55): inferring latch(es) for signal or variable "instrC", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Decoder_1.vhd(55): inferring latch(es) for signal or variable "isSub", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Decoder_1.vhd(55): inferring latch(es) for signal or variable "Rs1", which holds its previous value in one or more paths through the process
+Warning (10492): VHDL Process Statement warning at Decoder_1.vhd(111): signal "operator" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Decoder_1.vhd(113): signal "operator" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Decoder_1.vhd(121): signal "exed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Decoder_1.vhd(122): signal "updd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Decoder_1.vhd(123): signal "regC" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Decoder_1.vhd(124): signal "instrC" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at Decoder_1.vhd(108): inferring latch(es) for signal or variable "Rs2", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "Rs2" at Decoder_1.vhd(108)
+Info (10041): Inferred latch for "Rs1" at Decoder_1.vhd(55)
+Info (10041): Inferred latch for "isSub" at Decoder_1.vhd(55)
+Info (10041): Inferred latch for "instrC[0]" at Decoder_1.vhd(55)
+Info (10041): Inferred latch for "instrC[1]" at Decoder_1.vhd(55)
+Info (10041): Inferred latch for "instrC[2]" at Decoder_1.vhd(55)
+Info (10041): Inferred latch for "instrC[3]" at Decoder_1.vhd(55)
+Info (10041): Inferred latch for "imm[0]" at Decoder_1.vhd(37)
+Info (10041): Inferred latch for "imm[1]" at Decoder_1.vhd(37)
+Info (10041): Inferred latch for "imm[2]" at Decoder_1.vhd(37)
+Info (10041): Inferred latch for "imm[3]" at Decoder_1.vhd(37)
+Info (10041): Inferred latch for "imm[4]" at Decoder_1.vhd(37)
+Info (10041): Inferred latch for "imm[5]" at Decoder_1.vhd(37)
+Info (10041): Inferred latch for "imm[6]" at Decoder_1.vhd(37)
+Info (10041): Inferred latch for "imm[7]" at Decoder_1.vhd(37)
+Info (12128): Elaborating entity "Reg" for hierarchy "Reg:reg2T"
+Info (12128): Elaborating entity "regEnable" for hierarchy "regEnable:regEN"
+Warning (10631): VHDL Process Statement warning at regEnable.vhd(20): inferring latch(es) for signal or variable "reg0", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at regEnable.vhd(20): inferring latch(es) for signal or variable "reg1", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "reg1" at regEnable.vhd(20)
+Info (10041): Inferred latch for "reg0" at regEnable.vhd(20)
+Info (12128): Elaborating entity "moveImm" for hierarchy "moveImm:ImmtoReg"
+Info (12128): Elaborating entity "bitInverter" for hierarchy "bitInverter:toInvert"
+Warning (10631): VHDL Process Statement warning at bitInverter.vhd(27): inferring latch(es) for signal or variable "invertedV", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at bitInverter.vhd(27): inferring latch(es) for signal or variable "invert_out", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "invert_out[0]" at bitInverter.vhd(27)
+Info (10041): Inferred latch for "invert_out[1]" at bitInverter.vhd(27)
+Info (10041): Inferred latch for "invert_out[2]" at bitInverter.vhd(27)
+Info (10041): Inferred latch for "invert_out[3]" at bitInverter.vhd(27)
+Info (10041): Inferred latch for "invert_out[4]" at bitInverter.vhd(27)
+Info (10041): Inferred latch for "invert_out[5]" at bitInverter.vhd(27)
+Info (10041): Inferred latch for "invert_out[6]" at bitInverter.vhd(27)
+Info (10041): Inferred latch for "invert_out[7]" at bitInverter.vhd(27)
+Info (10041): Inferred latch for "invertedV[0]" at bitInverter.vhd(27)
+Info (10041): Inferred latch for "invertedV[1]" at bitInverter.vhd(27)
+Info (10041): Inferred latch for "invertedV[2]" at bitInverter.vhd(27)
+Info (10041): Inferred latch for "invertedV[3]" at bitInverter.vhd(27)
+Info (10041): Inferred latch for "invertedV[4]" at bitInverter.vhd(27)
+Info (10041): Inferred latch for "invertedV[5]" at bitInverter.vhd(27)
+Info (10041): Inferred latch for "invertedV[6]" at bitInverter.vhd(27)
+Info (10041): Inferred latch for "invertedV[7]" at bitInverter.vhd(27)
+Info (12128): Elaborating entity "AddOne" for hierarchy "AddOne:Add1"
+Warning (10541): VHDL Signal Declaration warning at AddOne.vhd(12): used implicit default value for signal "num2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "oneBitAdder" for hierarchy "AddOne:Add1|oneBitAdder:Bit0"
+Info (12128): Elaborating entity "Adder" for hierarchy "Adder:AddSub"
+Info (12128): Elaborating entity "EOR" for hierarchy "EOR:Reg_XoR"
+Warning (10492): VHDL Process Statement warning at EOR.vhd(32): signal "wReg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at EOR.vhd(38): signal "source" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at EOR.vhd(38): signal "dest" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "And_reg" for hierarchy "And_reg:And1"
+Warning (10492): VHDL Process Statement warning at And_reg.vhd(31): signal "wReg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at And_reg.vhd(33): signal "wReg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at And_reg.vhd(37): signal "source" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at And_reg.vhd(37): signal "dest" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at And_reg.vhd(22): inferring latch(es) for signal or variable "source", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at And_reg.vhd(22): inferring latch(es) for signal or variable "dest", which holds its previous value in one or more paths through the process
+Info (12128): Elaborating entity "bitInverter_number" for hierarchy "bitInverter_number:toInvertnum"
+Warning (10492): VHDL Process Statement warning at bitInverter_number.vhd(31): signal "number" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at bitInverter_number.vhd(32): signal "number_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at bitInverter_number.vhd(34): signal "isSub" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at bitInverter_number.vhd(35): signal "number_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at bitInverter_number.vhd(40): signal "Rs2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at bitInverter_number.vhd(41): signal "reg1_val_num" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at bitInverter_number.vhd(43): signal "reg0_val_num" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "Add_number" for hierarchy "Add_number:AddSubnum"
+Info (12128): Elaborating entity "Multiplexor" for hierarchy "Multiplexor:Mux"
+Warning (10492): VHDL Process Statement warning at Multiplexor.vhd(33): signal "addorsub" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Multiplexor.vhd(36): signal "movimm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Multiplexor.vhd(39): signal "invert" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Multiplexor.vhd(42): signal "AndReg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Multiplexor.vhd(45): signal "EOR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Multiplexor.vhd(48): signal "addSubAnsNum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Multiplexor.vhd(51): signal "RShift_ans" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Multiplexor.vhd(54): signal "LShift_ans" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at Multiplexor.vhd(28): inferring latch(es) for signal or variable "currAns", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "currAns[0]" at Multiplexor.vhd(28)
+Info (10041): Inferred latch for "currAns[1]" at Multiplexor.vhd(28)
+Info (10041): Inferred latch for "currAns[2]" at Multiplexor.vhd(28)
+Info (10041): Inferred latch for "currAns[3]" at Multiplexor.vhd(28)
+Info (10041): Inferred latch for "currAns[4]" at Multiplexor.vhd(28)
+Info (10041): Inferred latch for "currAns[5]" at Multiplexor.vhd(28)
+Info (10041): Inferred latch for "currAns[6]" at Multiplexor.vhd(28)
+Info (10041): Inferred latch for "currAns[7]" at Multiplexor.vhd(28)
+Info (12128): Elaborating entity "left_shift" for hierarchy "left_shift:Lshift"
+Warning (10492): VHDL Process Statement warning at left_shift.vhd(20): signal "Rs2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at left_shift.vhd(27): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at left_shift.vhd(28): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at left_shift.vhd(29): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at left_shift.vhd(30): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at left_shift.vhd(31): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at left_shift.vhd(32): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at left_shift.vhd(33): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at left_shift.vhd(35): signal "output" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "right_shift" for hierarchy "right_shift:Rshift"
+Warning (10492): VHDL Process Statement warning at right_shift.vhd(21): signal "Rs2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at right_shift.vhd(27): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at right_shift.vhd(28): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at right_shift.vhd(29): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at right_shift.vhd(30): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at right_shift.vhd(31): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at right_shift.vhd(32): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at right_shift.vhd(33): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at right_shift.vhd(36): signal "output" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "Display" for hierarchy "Display:Disp"
+Warning (10492): VHDL Process Statement warning at Display.vhd(28): signal "reg0_value" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(29): signal "reg0_value" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(32): signal "reg1_value" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(33): signal "reg1_value" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(42): signal "right_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(50): signal "right_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(58): signal "right_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(66): signal "right_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(74): signal "right_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(82): signal "right_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(90): signal "right_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(98): signal "right_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(106): signal "right_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(114): signal "right_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(122): signal "right_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(130): signal "right_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(138): signal "right_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(146): signal "right_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(154): signal "right_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(162): signal "right_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at Display.vhd(40): inferring latch(es) for signal or variable "b0", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Display.vhd(40): inferring latch(es) for signal or variable "b1", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Display.vhd(40): inferring latch(es) for signal or variable "b2", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Display.vhd(40): inferring latch(es) for signal or variable "b3", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Display.vhd(40): inferring latch(es) for signal or variable "b4", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Display.vhd(40): inferring latch(es) for signal or variable "b5", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Display.vhd(40): inferring latch(es) for signal or variable "b6", which holds its previous value in one or more paths through the process
+Warning (10492): VHDL Process Statement warning at Display.vhd(177): signal "left_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(185): signal "left_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(193): signal "left_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(201): signal "left_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(209): signal "left_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(217): signal "left_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(225): signal "left_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(233): signal "left_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(241): signal "left_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(249): signal "left_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(257): signal "left_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(265): signal "left_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(273): signal "left_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(281): signal "left_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(289): signal "left_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Display.vhd(297): signal "left_disp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at Display.vhd(175): inferring latch(es) for signal or variable "a0", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Display.vhd(175): inferring latch(es) for signal or variable "a1", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Display.vhd(175): inferring latch(es) for signal or variable "a2", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Display.vhd(175): inferring latch(es) for signal or variable "a3", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Display.vhd(175): inferring latch(es) for signal or variable "a4", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Display.vhd(175): inferring latch(es) for signal or variable "a5", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Display.vhd(175): inferring latch(es) for signal or variable "a6", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "a6" at Display.vhd(175)
+Info (10041): Inferred latch for "a5" at Display.vhd(175)
+Info (10041): Inferred latch for "a4" at Display.vhd(175)
+Info (10041): Inferred latch for "a3" at Display.vhd(175)
+Info (10041): Inferred latch for "a2" at Display.vhd(175)
+Info (10041): Inferred latch for "a1" at Display.vhd(175)
+Info (10041): Inferred latch for "a0" at Display.vhd(175)
+Info (10041): Inferred latch for "b6" at Display.vhd(40)
+Info (10041): Inferred latch for "b5" at Display.vhd(40)
+Info (10041): Inferred latch for "b4" at Display.vhd(40)
+Info (10041): Inferred latch for "b3" at Display.vhd(40)
+Info (10041): Inferred latch for "b2" at Display.vhd(40)
+Info (10041): Inferred latch for "b1" at Display.vhd(40)
+Info (10041): Inferred latch for "b0" at Display.vhd(40)
+Warning (13012): Latch Decoder_1:Decoder1|instrC[3] has unsafe behavior
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Logic_in[6]
+Warning (13012): Latch Decoder_1:Decoder1|instrC[2] has unsafe behavior
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal Logic_in[6]
+Warning (13012): Latch Decoder_1:Decoder1|instrC[1] has unsafe behavior
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal Logic_in[6]
+Warning (13012): Latch Decoder_1:Decoder1|instrC[0] has unsafe behavior
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal Logic_in[6]
+Warning (13012): Latch Decoder_1:Decoder1|isSub has unsafe behavior
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal Logic_in[11]
+Warning (13012): Latch Decoder_1:Decoder1|Rs1 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Logic_in[9]
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 304 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 38 output pins
+    Info (21061): Implemented 248 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 124 warnings
+    Info: Peak virtual memory: 4708 megabytes
+    Info: Processing ended: Sun Apr 28 12:42:44 2019
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
+
+
