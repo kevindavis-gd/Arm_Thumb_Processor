@@ -1,0 +1,61 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Multiplexor is
+
+	port
+	(
+		instr		: in std_logic_vector (3 downto 0);
+		addorsub : in std_logic_vector (7 downto 0);
+		xorr    	: in std_logic_vector (7 downto 0);
+		mov	  	: in std_logic_vector (7 downto 0);
+		
+		movimm	: in std_logic_vector (7 downto 0);
+		incre   	: in std_logic_vector (7 downto 0);
+		rotl     : in std_logic_vector (7 downto 0);
+		rotr     : in std_logic_vector (7 downto 0);
+		outpt    : in std_logic_vector (7 downto 0);
+		to_reg 	:out std_logic_vector (7 downto 0)
+	);
+
+end entity;
+
+architecture rtl of Multiplexor is
+
+ signal currAns: std_logic_vector (7 downto 0);
+ 
+begin
+
+	process(instr) is
+	begin
+	
+		if ((instr = "0000") or (instr = "0111")) then
+			--add
+			currAns <= addorsub;
+		elsif (instr = "0011") then
+			--xorr
+			currAns <= xorr;
+		elsif(instr = "1000") then
+			--mov
+			currAns <= mov;
+		elsif(instr = "1111") then
+			--incr
+			currAns <= incre;
+		elsif(instr = "1101") then
+			--rotl
+			currAns <= rotl;
+		elsif(instr = "1001") then
+			--rotr
+			currAns <= rotr;
+		elsif(instr = "1011") then
+			--move immediate to register
+			currAns <= movimm;
+		
+		
+		end if;
+	
+	end process;
+	
+	to_reg <= currAns;
+
+end rtl;

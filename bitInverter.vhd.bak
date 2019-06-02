@@ -1,0 +1,49 @@
+-- Quartus II VHDL Template
+--Bit Inverter
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity bitInverter is
+
+	port
+	(
+		al_val 		:in std_logic_vector (7 downto 0);
+		bl_val 		:in std_logic_vector (7 downto 0);
+		whichReg 	:in std_logic;
+		isSub 		:in std_logic;
+		isSub_out 	:out std_logic;
+		al_valout 	: out std_logic_vector (7 downto 0);
+		bl_valout 	: out std_logic_vector (7 downto 0)
+	);
+
+end entity;
+
+architecture rtl of bitInverter is
+
+ signal invertedV: std_logic_vector (7 downto 0);
+ 
+begin
+
+	process(al_val, bl_val, whichReg, isSub) is
+	begin
+		if(isSub = '1') then
+			if (whichReg = '0') then
+				--value is going to AL so invert BL
+				invertedV <= not bl_val;
+				al_valout <= al_val;
+				bl_valout <= invertedV;
+			else
+				--value is going to BL so invert AL
+				invertedV <= not al_val;
+				bl_valout <= bl_val;
+				al_valout <= invertedV;
+			end if;
+		else
+			al_valout <= al_val;
+			bl_valout <= bl_val;
+		end if;
+	end process;
+	
+	isSub_out <= isSub;
+
+end rtl;

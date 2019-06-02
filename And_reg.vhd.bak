@@ -1,0 +1,21 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity And_reg is
+
+	port
+	(
+		reg0    : in std_logic_vector (7 downto 0);
+		reg1    : in std_logic_vector (7 downto 0);
+		to_reg : out std_logic_vector (7 downto 0)
+	);
+
+end entity;
+
+architecture rtl of And_reg is
+ 
+begin
+
+	to_reg1 <= reg0 and reg1;
+
+end rtl;

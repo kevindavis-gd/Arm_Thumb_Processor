@@ -1,0 +1,26 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity EOR is
+
+	port
+	(
+		reg0    : in std_logic_vector (7 downto 0);
+		reg1    : in std_logic_vector (7 downto 0);
+		to_reg  : out std_logic_vector (7 downto 0)
+	);
+
+end entity;
+
+architecture rtl of xorr is
+ 
+begin
+
+	process(Rs2)
+	begin
+		to_reg <= reg1 xor reg0;
+		
+	end process;
+
+end rtl;

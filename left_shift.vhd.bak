@@ -1,0 +1,39 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;               -- Needed for shifts
+entity example_shift is
+end example_shift;
+
+
+entity left_shift is
+        port( Reg0, Reg1 	: in  std_logic_vector(7 downto 0);
+					Rs2			: in std_logic;
+              shift	      : out std_logic_vector(7 downto 0) 
+				  );
+end left_shift;
+
+architecture behave of left_shift is
+
+signal output;
+   
+begin
+ 
+  process(Reg0,Reg1) is
+  begin
+	if (Rs2 = '0') then
+	output <= shift_left(unsigned(Reg0), 1);
+	else
+	output <= shift_left(unsigned(Reg1), 1);
+	end if;
+
+ shift <= output;
+  end process;
+end architecture behave;
+
+  -- Left Shift
+    --r_Unsigned_L <= shift_left(unsigned(r_Shift1), 1);
+    --r_Signed_L   <= shift_left(signed(r_Shift1), 1);
+     
+    -- Right Shift
+   -- r_Unsigned_R <= shift_right(unsigned(r_Shift1), 2);
+   -- r_Signed_R   <= shift_right(signed(r_Shift1), 2);

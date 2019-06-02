@@ -1,0 +1,26 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+entity Reg is 
+Port (Reg_ck: in std_logic;
+		Reg_enable: in std_logic;
+		Reg_in: in std_logic_vector(7 downto 0);
+		Reg_out: out std_logic_vector (7 downto 0));
+end Reg;	
+
+--How Register 1 works
+architecture BReg of Reg is 
+signal tempreg: std_logic_vector (7 downto 0);
+begin
+	process(Reg_ck)
+	begin
+			if (rising_edge(Reg_ck))
+			then 
+				if (Reg_enable = '1') 
+				then 
+					tempreg <=Reg_in;
+				end if;
+			end if;
+	end process;
+	Reg_out<=tempreg;
+end BReg;
