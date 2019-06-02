@@ -1,0 +1,1022 @@
+$comment
+	File created using the following command:
+		vcd file Logic.msim.vcd -direction
+$end
+$date
+	Sun Apr 28 12:54:26 2019
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module Logic_vlg_vec_tst $end
+$var reg 1 ! Logic_exe $end
+$var reg 16 " Logic_in [15:0] $end
+$var reg 1 # Logic_upd $end
+$var wire 1 $ a0 $end
+$var wire 1 % a1 $end
+$var wire 1 & a2 $end
+$var wire 1 ' a3 $end
+$var wire 1 ( a4 $end
+$var wire 1 ) a5 $end
+$var wire 1 * a6 $end
+$var wire 1 + b0 $end
+$var wire 1 , b1 $end
+$var wire 1 - b2 $end
+$var wire 1 . b3 $end
+$var wire 1 / b4 $end
+$var wire 1 0 b5 $end
+$var wire 1 1 b6 $end
+$var wire 1 2 reg0_valueout [7] $end
+$var wire 1 3 reg0_valueout [6] $end
+$var wire 1 4 reg0_valueout [5] $end
+$var wire 1 5 reg0_valueout [4] $end
+$var wire 1 6 reg0_valueout [3] $end
+$var wire 1 7 reg0_valueout [2] $end
+$var wire 1 8 reg0_valueout [1] $end
+$var wire 1 9 reg0_valueout [0] $end
+$var wire 1 : reg1_valueout [7] $end
+$var wire 1 ; reg1_valueout [6] $end
+$var wire 1 < reg1_valueout [5] $end
+$var wire 1 = reg1_valueout [4] $end
+$var wire 1 > reg1_valueout [3] $end
+$var wire 1 ? reg1_valueout [2] $end
+$var wire 1 @ reg1_valueout [1] $end
+$var wire 1 A reg1_valueout [0] $end
+$var wire 1 B regT_valueout [7] $end
+$var wire 1 C regT_valueout [6] $end
+$var wire 1 D regT_valueout [5] $end
+$var wire 1 E regT_valueout [4] $end
+$var wire 1 F regT_valueout [3] $end
+$var wire 1 G regT_valueout [2] $end
+$var wire 1 H regT_valueout [1] $end
+$var wire 1 I regT_valueout [0] $end
+$var wire 1 J sampler $end
+$scope module i1 $end
+$var wire 1 K gnd $end
+$var wire 1 L vcc $end
+$var wire 1 M unknown $end
+$var tri1 1 N devclrn $end
+$var tri1 1 O devpor $end
+$var tri1 1 P devoe $end
+$var wire 1 Q AddSub|Bit0|sum~2_combout $end
+$var wire 1 R AddSub|Bit0|sum~14_combout $end
+$var wire 1 S regEN|reg1~combout $end
+$var wire 1 T Decoder1|instrC[3]~2_combout $end
+$var wire 1 U Decoder1|comb~5_combout $end
+$var wire 1 V Reg_XoR|dest[0]~0_combout $end
+$var wire 1 W Mux|currAns[0]~0_combout $end
+$var wire 1 X toInvertnum|reg0_valout_num[0]~0_combout $end
+$var wire 1 Y AddSubnum|Bit0|sum~0_combout $end
+$var wire 1 Z Mux|currAns[0]~1_combout $end
+$var wire 1 [ Mux|currAns[0]~2_combout $end
+$var wire 1 \ Mux|currAns[0]~3_combout $end
+$var wire 1 ] Mux|currAns[0]~4_combout $end
+$var wire 1 ^ Mux|currAns[0]~5_combout $end
+$var wire 1 _ toInvert|reg1_valout[1]~2_combout $end
+$var wire 1 ` AddSubnum|Bit0|cout~0_combout $end
+$var wire 1 a AddSubnum|Bit1|sum~0_combout $end
+$var wire 1 b Add1|Bit2|sum~0_combout $end
+$var wire 1 c toInvert|reg0_valout[2]~4_combout $end
+$var wire 1 d toInvert|reg0_valout[3]~6_combout $end
+$var wire 1 e toInvertnum|reg0_valout_num[3]~3_combout $end
+$var wire 1 f Add1|Bit4|sum~0_combout $end
+$var wire 1 g toInvert|reg1_valout[4]~7_combout $end
+$var wire 1 h toInvert|reg0_valout[5]~9_combout $end
+$var wire 1 i toInvertnum|reg0_valout_num[5]~5_combout $end
+$var wire 1 j Add1|Bit6|sum~0_combout $end
+$var wire 1 k toInvert|reg0_valout[6]~10_combout $end
+$var wire 1 l Mux|currAns[6]~33_combout $end
+$var wire 1 m toInvertnum|reg0_valout_num[6]~6_combout $end
+$var wire 1 n Logic_exe~input_o $end
+$var wire 1 o Logic_in[4]~input_o $end
+$var wire 1 p Logic_exe~inputclkctrl_outclk $end
+$var wire 1 q regEN|reg1~clkctrl_outclk $end
+$var wire 1 r reg0_valueout[0]~output_o $end
+$var wire 1 s reg0_valueout[1]~output_o $end
+$var wire 1 t reg0_valueout[2]~output_o $end
+$var wire 1 u reg0_valueout[3]~output_o $end
+$var wire 1 v reg0_valueout[4]~output_o $end
+$var wire 1 w reg0_valueout[5]~output_o $end
+$var wire 1 x reg0_valueout[6]~output_o $end
+$var wire 1 y reg0_valueout[7]~output_o $end
+$var wire 1 z reg1_valueout[0]~output_o $end
+$var wire 1 { reg1_valueout[1]~output_o $end
+$var wire 1 | reg1_valueout[2]~output_o $end
+$var wire 1 } reg1_valueout[3]~output_o $end
+$var wire 1 ~ reg1_valueout[4]~output_o $end
+$var wire 1 !! reg1_valueout[5]~output_o $end
+$var wire 1 "! reg1_valueout[6]~output_o $end
+$var wire 1 #! reg1_valueout[7]~output_o $end
+$var wire 1 $! regT_valueout[0]~output_o $end
+$var wire 1 %! regT_valueout[1]~output_o $end
+$var wire 1 &! regT_valueout[2]~output_o $end
+$var wire 1 '! regT_valueout[3]~output_o $end
+$var wire 1 (! regT_valueout[4]~output_o $end
+$var wire 1 )! regT_valueout[5]~output_o $end
+$var wire 1 *! regT_valueout[6]~output_o $end
+$var wire 1 +! regT_valueout[7]~output_o $end
+$var wire 1 ,! a0~output_o $end
+$var wire 1 -! a1~output_o $end
+$var wire 1 .! a2~output_o $end
+$var wire 1 /! a3~output_o $end
+$var wire 1 0! a4~output_o $end
+$var wire 1 1! a5~output_o $end
+$var wire 1 2! a6~output_o $end
+$var wire 1 3! b0~output_o $end
+$var wire 1 4! b1~output_o $end
+$var wire 1 5! b2~output_o $end
+$var wire 1 6! b3~output_o $end
+$var wire 1 7! b4~output_o $end
+$var wire 1 8! b5~output_o $end
+$var wire 1 9! b6~output_o $end
+$var wire 1 :! Logic_upd~input_o $end
+$var wire 1 ;! Logic_in[0]~input_o $end
+$var wire 1 <! Logic_in[1]~input_o $end
+$var wire 1 =! Logic_in[2]~input_o $end
+$var wire 1 >! Decoder1|Equal1~1_combout $end
+$var wire 1 ?! Logic_in[14]~input_o $end
+$var wire 1 @! Logic_in[12]~input_o $end
+$var wire 1 A! Logic_in[11]~input_o $end
+$var wire 1 B! Decoder1|Equal0~0_combout $end
+$var wire 1 C! Logic_in[9]~input_o $end
+$var wire 1 D! Logic_in[8]~input_o $end
+$var wire 1 E! Logic_in[10]~input_o $end
+$var wire 1 F! Decoder1|Equal1~0_combout $end
+$var wire 1 G! Decoder1|Equal1~2_combout $end
+$var wire 1 H! regEN|reg0~combout $end
+$var wire 1 I! regEN|reg0~clkctrl_outclk $end
+$var wire 1 J! reg2T|Reg_out[0]~feeder_combout $end
+$var wire 1 K! reg0|Reg_out[0]~feeder_combout $end
+$var wire 1 L! Logic_in[13]~input_o $end
+$var wire 1 M! Logic_in[15]~input_o $end
+$var wire 1 N! Decoder1|instrC[3]~5_combout $end
+$var wire 1 O! Decoder1|Equal2~0_combout $end
+$var wire 1 P! Decoder1|Equal0~1_combout $end
+$var wire 1 Q! Decoder1|Equal0~2_combout $end
+$var wire 1 R! Decoder1|instrC[1]~6_combout $end
+$var wire 1 S! Logic_in[7]~input_o $end
+$var wire 1 T! Decoder1|instrC[3]~7_combout $end
+$var wire 1 U! Decoder1|Equal4~0_combout $end
+$var wire 1 V! Decoder1|Equal4~1_combout $end
+$var wire 1 W! Decoder1|instrC[3]~8_combout $end
+$var wire 1 X! Decoder1|Equal7~0_combout $end
+$var wire 1 Y! Decoder1|instrC[3]~0_combout $end
+$var wire 1 Z! Decoder1|instrC[3]~9_combout $end
+$var wire 1 [! Decoder1|instrC[3]~10_combout $end
+$var wire 1 \! Logic_in[6]~input_o $end
+$var wire 1 ]! Decoder1|Equal6~0_combout $end
+$var wire 1 ^! Decoder1|instrC[3]~11_combout $end
+$var wire 1 _! Decoder1|instrC[3]~12_combout $end
+$var wire 1 `! Decoder1|instrC[3]~3_combout $end
+$var wire 1 a! Logic_in[5]~input_o $end
+$var wire 1 b! Logic_in[3]~input_o $end
+$var wire 1 c! Decoder1|Equal13~0_combout $end
+$var wire 1 d! Decoder1|instrC[3]~1_combout $end
+$var wire 1 e! Decoder1|instrC[3]~4_combout $end
+$var wire 1 f! Decoder1|instrC[3]~clkctrl_outclk $end
+$var wire 1 g! Decoder1|comb~7_combout $end
+$var wire 1 h! Decoder1|Rs2~combout $end
+$var wire 1 i! Decoder1|Equal3~0_combout $end
+$var wire 1 j! Decoder1|Equal2~1_combout $end
+$var wire 1 k! Decoder1|instrC[0]~13_combout $end
+$var wire 1 l! Decoder1|comb~9_combout $end
+$var wire 1 m! Decoder1|comb~8_combout $end
+$var wire 1 n! Decoder1|instrC[1]~14_combout $end
+$var wire 1 o! Decoder1|comb~6_combout $end
+$var wire 1 p! Mux|Equal6~0_combout $end
+$var wire 1 q! Decoder1|comb~4_combout $end
+$var wire 1 r! Mux|currAns[3]~7_combout $end
+$var wire 1 s! Decoder1|Equal0~2clkctrl_outclk $end
+$var wire 1 t! Decoder1|Equal9~0_combout $end
+$var wire 1 u! Decoder1|Equal4~2_combout $end
+$var wire 1 v! Decoder1|isSub~0_combout $end
+$var wire 1 w! Decoder1|isSub~combout $end
+$var wire 1 x! Decoder1|isSub~clkctrl_outclk $end
+$var wire 1 y! toInvert|reg0_valout[4]~7_combout $end
+$var wire 1 z! toInvert|reg1_valout[3]~5_combout $end
+$var wire 1 {! toInvert|reg1_valout[2]~4_combout $end
+$var wire 1 |! toInvert|reg1_valout~1_combout $end
+$var wire 1 }! toInvert|reg0_valout[1]~3_combout $end
+$var wire 1 ~! toInvert|reg0_valout[0]~1_combout $end
+$var wire 1 !" toInvert|reg0_valout~0_combout $end
+$var wire 1 "" toInvert|reg1_valout[0]~0_combout $end
+$var wire 1 #" AddSub|Bit0|sum~1_cout $end
+$var wire 1 $" AddSub|Bit0|sum~3 $end
+$var wire 1 %" AddSub|Bit0|sum~5 $end
+$var wire 1 &" AddSub|Bit0|sum~7 $end
+$var wire 1 '" AddSub|Bit0|sum~9 $end
+$var wire 1 (" AddSub|Bit0|sum~10_combout $end
+$var wire 1 )" Mux|currAns[4]~23_combout $end
+$var wire 1 *" toInvertnum|reg0_valout_num[4]~4_combout $end
+$var wire 1 +" Decoder1|Rs1~combout $end
+$var wire 1 ," toInvertnum|reg0_valout_num[2]~2_combout $end
+$var wire 1 -" toInvertnum|reg0_valout_num[1]~1_combout $end
+$var wire 1 ." AddSubnum|Bit0|cout~1_combout $end
+$var wire 1 /" AddSubnum|Bit1|cout~0_combout $end
+$var wire 1 0" AddSubnum|Bit2|cout~0_combout $end
+$var wire 1 1" AddSubnum|Bit3|sum~1_cout $end
+$var wire 1 2" AddSubnum|Bit3|sum~3 $end
+$var wire 1 3" AddSubnum|Bit3|sum~4_combout $end
+$var wire 1 4" Mux|currAns[4]~24_combout $end
+$var wire 1 5" Mux|currAns[4]~25_combout $end
+$var wire 1 6" Mux|currAns[4]~26_combout $end
+$var wire 1 7" Mux|currAns[4]~27_combout $end
+$var wire 1 8" reg2T|Reg_out[4]~feeder_combout $end
+$var wire 1 9" toInvert|reg0_valout~5_combout $end
+$var wire 1 :" Add1|Bit3|sum~0_combout $end
+$var wire 1 ;" AddSubnum|Bit3|sum~2_combout $end
+$var wire 1 <" AddSub|Bit0|sum~8_combout $end
+$var wire 1 =" Mux|currAns[3]~18_combout $end
+$var wire 1 >" Mux|currAns[3]~19_combout $end
+$var wire 1 ?" Mux|currAns[3]~20_combout $end
+$var wire 1 @" Mux|currAns[3]~21_combout $end
+$var wire 1 A" Mux|currAns[3]~22_combout $end
+$var wire 1 B" toInvert|reg1_valout~3_combout $end
+$var wire 1 C" AddSubnum|Bit2|sum~0_combout $end
+$var wire 1 D" AddSub|Bit0|sum~6_combout $end
+$var wire 1 E" Mux|currAns[2]~13_combout $end
+$var wire 1 F" Mux|currAns[2]~14_combout $end
+$var wire 1 G" Mux|currAns[2]~15_combout $end
+$var wire 1 H" Mux|currAns[2]~16_combout $end
+$var wire 1 I" Mux|currAns[2]~17_combout $end
+$var wire 1 J" toInvert|reg0_valout~2_combout $end
+$var wire 1 K" Mux|currAns[3]~6_combout $end
+$var wire 1 L" Add1|Bit1|sum~0_combout $end
+$var wire 1 M" AddSub|Bit0|sum~4_combout $end
+$var wire 1 N" Mux|currAns[1]~8_combout $end
+$var wire 1 O" Mux|currAns[1]~9_combout $end
+$var wire 1 P" Mux|currAns[1]~10_combout $end
+$var wire 1 Q" Mux|currAns[1]~11_combout $end
+$var wire 1 R" Mux|currAns[1]~12_combout $end
+$var wire 1 S" toInvert|reg0_valout[7]~11_combout $end
+$var wire 1 T" toInvert|reg1_valout[7]~11_combout $end
+$var wire 1 U" toInvert|reg1_valout[6]~10_combout $end
+$var wire 1 V" reg1|Reg_out[5]~feeder_combout $end
+$var wire 1 W" toInvert|reg1_valout~6_combout $end
+$var wire 1 X" toInvert|reg1_valout[5]~8_combout $end
+$var wire 1 Y" AddSub|Bit0|sum~11 $end
+$var wire 1 Z" AddSub|Bit0|sum~13 $end
+$var wire 1 [" AddSub|Bit0|sum~15 $end
+$var wire 1 \" AddSub|Bit0|sum~16_combout $end
+$var wire 1 ]" Add1|Bit6|cout~0_combout $end
+$var wire 1 ^" Mux|currAns[7]~40_combout $end
+$var wire 1 _" Mux|currAns[7]~41_combout $end
+$var wire 1 `" toInvertnum|reg0_valout_num[7]~7_combout $end
+$var wire 1 a" AddSubnum|Bit3|sum~5 $end
+$var wire 1 b" AddSubnum|Bit3|sum~7 $end
+$var wire 1 c" AddSubnum|Bit3|sum~9 $end
+$var wire 1 d" AddSubnum|Bit3|sum~10_combout $end
+$var wire 1 e" Mux|currAns[7]~38_combout $end
+$var wire 1 f" Mux|currAns[7]~39_combout $end
+$var wire 1 g" Mux|currAns[7]~42_combout $end
+$var wire 1 h" toInvert|reg1_valout~9_combout $end
+$var wire 1 i" AddSubnum|Bit3|sum~8_combout $end
+$var wire 1 j" Mux|currAns[6]~34_combout $end
+$var wire 1 k" Mux|currAns[6]~35_combout $end
+$var wire 1 l" Mux|currAns[6]~36_combout $end
+$var wire 1 m" Mux|currAns[6]~37_combout $end
+$var wire 1 n" toInvert|reg0_valout~8_combout $end
+$var wire 1 o" Add1|Bit3|cout~0_combout $end
+$var wire 1 p" Add1|Bit5|sum~0_combout $end
+$var wire 1 q" AddSubnum|Bit3|sum~6_combout $end
+$var wire 1 r" AddSub|Bit0|sum~12_combout $end
+$var wire 1 s" Mux|currAns[5]~28_combout $end
+$var wire 1 t" Mux|currAns[5]~29_combout $end
+$var wire 1 u" Mux|currAns[5]~30_combout $end
+$var wire 1 v" Mux|currAns[5]~31_combout $end
+$var wire 1 w" Mux|currAns[5]~32_combout $end
+$var wire 1 x" Disp|Equal0~0_combout $end
+$var wire 1 y" Disp|left_disp[1]~1_combout $end
+$var wire 1 z" Disp|left_disp[0]~2_combout $end
+$var wire 1 {" Disp|left_disp[3]~0_combout $end
+$var wire 1 |" Disp|left_disp[2]~3_combout $end
+$var wire 1 }" Disp|a0~0_combout $end
+$var wire 1 ~" Disp|a1~0_combout $end
+$var wire 1 !# Disp|a2~0_combout $end
+$var wire 1 "# Disp|a3~0_combout $end
+$var wire 1 ## Disp|a4~0_combout $end
+$var wire 1 $# Disp|a5~0_combout $end
+$var wire 1 %# Disp|a6~0_combout $end
+$var wire 1 &# Disp|right_disp[1]~1_combout $end
+$var wire 1 '# Disp|right_disp[0]~2_combout $end
+$var wire 1 (# Disp|right_disp[2]~3_combout $end
+$var wire 1 )# Disp|right_disp[3]~0_combout $end
+$var wire 1 *# Disp|b0~0_combout $end
+$var wire 1 +# Disp|b1~0_combout $end
+$var wire 1 ,# Disp|b2~0_combout $end
+$var wire 1 -# Disp|b3~0_combout $end
+$var wire 1 .# Disp|b4~0_combout $end
+$var wire 1 /# Disp|b5~0_combout $end
+$var wire 1 0# Disp|b6~0_combout $end
+$var wire 1 1# Decoder1|imm [7] $end
+$var wire 1 2# Decoder1|imm [6] $end
+$var wire 1 3# Decoder1|imm [5] $end
+$var wire 1 4# Decoder1|imm [4] $end
+$var wire 1 5# Decoder1|imm [3] $end
+$var wire 1 6# Decoder1|imm [2] $end
+$var wire 1 7# Decoder1|imm [1] $end
+$var wire 1 8# Decoder1|imm [0] $end
+$var wire 1 9# And1|to_reg [7] $end
+$var wire 1 :# And1|to_reg [6] $end
+$var wire 1 ;# And1|to_reg [5] $end
+$var wire 1 <# And1|to_reg [4] $end
+$var wire 1 =# And1|to_reg [3] $end
+$var wire 1 ># And1|to_reg [2] $end
+$var wire 1 ?# And1|to_reg [1] $end
+$var wire 1 @# And1|to_reg [0] $end
+$var wire 1 A# reg1|Reg_out [7] $end
+$var wire 1 B# reg1|Reg_out [6] $end
+$var wire 1 C# reg1|Reg_out [5] $end
+$var wire 1 D# reg1|Reg_out [4] $end
+$var wire 1 E# reg1|Reg_out [3] $end
+$var wire 1 F# reg1|Reg_out [2] $end
+$var wire 1 G# reg1|Reg_out [1] $end
+$var wire 1 H# reg1|Reg_out [0] $end
+$var wire 1 I# toInvert|invertedV [7] $end
+$var wire 1 J# toInvert|invertedV [6] $end
+$var wire 1 K# toInvert|invertedV [5] $end
+$var wire 1 L# toInvert|invertedV [4] $end
+$var wire 1 M# toInvert|invertedV [3] $end
+$var wire 1 N# toInvert|invertedV [2] $end
+$var wire 1 O# toInvert|invertedV [1] $end
+$var wire 1 P# toInvert|invertedV [0] $end
+$var wire 1 Q# Reg_XoR|to_reg [7] $end
+$var wire 1 R# Reg_XoR|to_reg [6] $end
+$var wire 1 S# Reg_XoR|to_reg [5] $end
+$var wire 1 T# Reg_XoR|to_reg [4] $end
+$var wire 1 U# Reg_XoR|to_reg [3] $end
+$var wire 1 V# Reg_XoR|to_reg [2] $end
+$var wire 1 W# Reg_XoR|to_reg [1] $end
+$var wire 1 X# Reg_XoR|to_reg [0] $end
+$var wire 1 Y# reg0|Reg_out [7] $end
+$var wire 1 Z# reg0|Reg_out [6] $end
+$var wire 1 [# reg0|Reg_out [5] $end
+$var wire 1 \# reg0|Reg_out [4] $end
+$var wire 1 ]# reg0|Reg_out [3] $end
+$var wire 1 ^# reg0|Reg_out [2] $end
+$var wire 1 _# reg0|Reg_out [1] $end
+$var wire 1 `# reg0|Reg_out [0] $end
+$var wire 1 a# Mux|currAns [7] $end
+$var wire 1 b# Mux|currAns [6] $end
+$var wire 1 c# Mux|currAns [5] $end
+$var wire 1 d# Mux|currAns [4] $end
+$var wire 1 e# Mux|currAns [3] $end
+$var wire 1 f# Mux|currAns [2] $end
+$var wire 1 g# Mux|currAns [1] $end
+$var wire 1 h# Mux|currAns [0] $end
+$var wire 1 i# Decoder1|instrC [3] $end
+$var wire 1 j# Decoder1|instrC [2] $end
+$var wire 1 k# Decoder1|instrC [1] $end
+$var wire 1 l# Decoder1|instrC [0] $end
+$var wire 1 m# reg2T|Reg_out [7] $end
+$var wire 1 n# reg2T|Reg_out [6] $end
+$var wire 1 o# reg2T|Reg_out [5] $end
+$var wire 1 p# reg2T|Reg_out [4] $end
+$var wire 1 q# reg2T|Reg_out [3] $end
+$var wire 1 r# reg2T|Reg_out [2] $end
+$var wire 1 s# reg2T|Reg_out [1] $end
+$var wire 1 t# reg2T|Reg_out [0] $end
+$var wire 1 u# toInvert|invert_out [7] $end
+$var wire 1 v# toInvert|invert_out [6] $end
+$var wire 1 w# toInvert|invert_out [5] $end
+$var wire 1 x# toInvert|invert_out [4] $end
+$var wire 1 y# toInvert|invert_out [3] $end
+$var wire 1 z# toInvert|invert_out [2] $end
+$var wire 1 {# toInvert|invert_out [1] $end
+$var wire 1 |# toInvert|invert_out [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+b10000000000001 "
+0#
+0$
+0%
+0&
+0'
+0(
+0)
+1*
+0+
+0,
+0-
+0.
+0/
+00
+11
+09
+08
+07
+06
+05
+04
+03
+02
+0A
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+0I
+0H
+0G
+0F
+0E
+0D
+0C
+0B
+xJ
+0K
+1L
+xM
+1N
+1O
+1P
+xQ
+xR
+0S
+1T
+1U
+0V
+1W
+0X
+xY
+1Z
+x[
+0\
+x]
+1^
+0_
+x`
+xa
+xb
+xc
+xd
+0e
+xf
+0g
+xh
+0i
+xj
+xk
+0l
+0m
+0n
+0o
+0p
+0q
+0r
+0s
+0t
+0u
+0v
+0w
+0x
+0y
+0z
+0{
+0|
+0}
+0~
+0!!
+0"!
+0#!
+0$!
+0%!
+0&!
+0'!
+0(!
+0)!
+0*!
+0+!
+0,!
+0-!
+0.!
+0/!
+00!
+01!
+12!
+03!
+04!
+05!
+06!
+07!
+08!
+19!
+0:!
+1;!
+0<!
+0=!
+0>!
+0?!
+0@!
+0A!
+1B!
+0C!
+0D!
+0E!
+1F!
+1G!
+0H!
+0I!
+1J!
+0K!
+1L!
+0M!
+0N!
+0O!
+1P!
+1Q!
+0R!
+0S!
+1T!
+0U!
+0V!
+0W!
+0X!
+0Y!
+0Z!
+0[!
+0\!
+0]!
+1^!
+1_!
+0`!
+0a!
+0b!
+1c!
+0d!
+0e!
+0f!
+0g!
+0h!
+0i!
+0j!
+1k!
+1l!
+0m!
+1n!
+0o!
+0p!
+0q!
+0r!
+1s!
+0t!
+0u!
+0v!
+xw!
+xx!
+xy!
+0z!
+0{!
+0|!
+x}!
+x~!
+0!"
+0""
+0#"
+x$"
+x%"
+x&"
+x'"
+x("
+0)"
+0*"
+x+"
+0,"
+0-"
+x."
+x/"
+x0"
+01"
+x2"
+x3"
+04"
+05"
+06"
+07"
+08"
+09"
+x:"
+x;"
+x<"
+0="
+0>"
+0?"
+0@"
+0A"
+0B"
+xC"
+xD"
+0E"
+0F"
+0G"
+0H"
+0I"
+0J"
+0K"
+xL"
+xM"
+0N"
+0O"
+0P"
+0Q"
+0R"
+xS"
+0T"
+0U"
+0V"
+0W"
+0X"
+xY"
+xZ"
+x["
+x\"
+x]"
+x^"
+x_"
+0`"
+xa"
+xb"
+xc"
+xd"
+0e"
+0f"
+0g"
+0h"
+xi"
+0j"
+0k"
+0l"
+0m"
+0n"
+xo"
+xp"
+xq"
+xr"
+0s"
+0t"
+0u"
+0v"
+0w"
+0x"
+0y"
+0z"
+0{"
+0|"
+0}"
+0~"
+1!#
+0"#
+0##
+0$#
+0%#
+0&#
+0'#
+0(#
+0)#
+0*#
+0+#
+1,#
+0-#
+0.#
+0/#
+00#
+18#
+07#
+06#
+05#
+04#
+03#
+02#
+01#
+z@#
+0?#
+0>#
+0=#
+0<#
+0;#
+0:#
+09#
+0H#
+0G#
+0F#
+0E#
+0D#
+0C#
+0B#
+0A#
+xP#
+xO#
+xN#
+xM#
+xL#
+xK#
+xJ#
+xI#
+0X#
+0W#
+0V#
+0U#
+0T#
+0S#
+0R#
+0Q#
+0`#
+0_#
+0^#
+0]#
+0\#
+0[#
+0Z#
+0Y#
+1h#
+0g#
+0f#
+0e#
+0d#
+0c#
+0b#
+0a#
+1l#
+0k#
+0j#
+0i#
+0t#
+0s#
+0r#
+0q#
+0p#
+0o#
+0n#
+0m#
+x|#
+x{#
+xz#
+xy#
+xx#
+xw#
+xv#
+xu#
+$end
+#10000
+1!
+1n
+1p
+0J
+1t#
+1K!
+1$!
+1I
+#20000
+0!
+0n
+0p
+1J
+#140000
+1#
+1:!
+0J
+1H!
+1I!
+1`#
+1'#
+1!"
+xX
+1V
+1r
+19
+1/#
+1.#
+1-#
+1*#
+18!
+17!
+16!
+13!
+10
+1/
+1.
+1+
+#150000
+0#
+0:!
+1J
+0H!
+0I!
+#180000
+b10000100000001 "
+b10000100000011 "
+1<!
+1D!
+0J
+17#
+0T
+0T!
+0F!
+1O"
+0G!
+1P"
+1X#
+0V
+1Q"
+1R"
+1g#
+#190000
+1!
+1n
+1p
+1J
+1s#
+1%!
+1H
+#200000
+0!
+0n
+0p
+0J
+#300000
+1#
+1:!
+1J
+1S
+1q
+1H#
+1G#
+1""
+0X#
+1X
+1V
+1W#
+x-"
+1_
+1z
+1{
+1A
+1@
+1#"
+#310000
+0#
+0:!
+0J
+0S
+0q
+#330000
+b100000011 "
+b101000011 "
+b101000010 "
+b1000010 "
+b1000000 "
+0;!
+0<!
+1\!
+0D!
+0L!
+1J
+1>!
+08#
+07#
+1]!
+12#
+1T!
+1F!
+0Q!
+1N!
+0s!
+1G!
+0W
+0O"
+1Z!
+1l
+1U!
+1R!
+0W#
+0Z
+0P"
+1[!
+1j"
+0n!
+1W!
+0^
+0Q"
+1q!
+1o!
+0U
+1k"
+0h#
+0R"
+1j#
+1k#
+1l"
+0J!
+0g#
+1s"
+xj"
+1e"
+0_"
+1N"
+1K"
+1E"
+1="
+1)"
+1[
+1W
+1m"
+xt"
+0k"
+xO"
+1Q"
+xF"
+x>"
+x4"
+0]
+1b#
+0l"
+1R"
+0m"
+1g#
+0b#
+#340000
+1!
+1n
+1p
+0J
+0t#
+0K!
+0$!
+0I
+#350000
+0!
+0n
+0p
+1J
+#500000
+1#
+1:!
+0J
+1H!
+1I!
+1_#
+0`#
+1&#
+1?#
+1-"
+1|!
+0'#
+0!"
+xX
+0V
+1s
+0r
+18
+09
+10#
+0,#
+0Q"
+1G"
+0W
+0.#
+0-#
+0*#
+0R"
+1H"
+09!
+15!
+07!
+06!
+03!
+01
+1-
+0/
+0.
+0+
+0g#
+1I"
+1f#
+#510000
+0#
+0:!
+1J
+0H!
+0I!
+#530000
+b0 "
+0\!
+0J
+0]!
+1T
+0Z!
+0[!
+0q!
+0o!
+0l!
+0_!
+#1000000

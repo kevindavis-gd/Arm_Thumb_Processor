@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\shylo\Desktop\Logic Design Final Project\simulation\qsim
+vLogic
+Z1 !s100 B1mkccMo^NhSboG`QVmF^1
+Z2 I[f2MNA7V`;ClMPc>VgM@C1
+Z3 V0gUSVA;<T6D<iJBeDCe^T1
+Z4 dC:\Users\shylo\Desktop\Logic Design Final Project\simulation\qsim
+Z5 w1556474064
+Z6 8Logic.vo
+Z7 FLogic.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Logic.vo|
+Z10 o-work work -O0
+Z11 n@logic
+!i10b 1
+!s85 0
+Z12 !s108 1556474065.693000
+Z13 !s107 Logic.vo|
+!s101 -O0
+vLogic_vlg_check_tst
+!i10b 1
+Z14 !s100 FloWJPjz07[0?1QK_CNe[0
+Z15 IYFQREHmdO>Y3MG<41F0La2
+Z16 VFl7?Hl[CoT<FdFeNBT9DO2
+R4
+Z17 w1556474063
+Z18 8Logic.vt
+Z19 FLogic.vt
+L0 61
+R8
+r1
+!s85 0
+31
+Z20 !s108 1556474065.821000
+Z21 !s107 Logic.vt|
+Z22 !s90 -work|work|Logic.vt|
+!s101 -O0
+R10
+Z23 n@logic_vlg_check_tst
+vLogic_vlg_sample_tst
+!i10b 1
+Z24 !s100 HlRB2:BfBl:nJ=ciiHja33
+Z25 I01BYNBGUSX8^QZ3[Ogn030
+Z26 Ve=Be>R=4LbcPN4eL0h57a1
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@logic_vlg_sample_tst
+vLogic_vlg_vec_tst
+!i10b 1
+!s100 gPW4A^<aW3B=_gC7LlX=[1
+IkTlOmeI;?YOYA1NCzY@[Q2
+Z28 V<PLkRVJVf9hNH9_GP0_[O3
+R4
+R17
+R18
+R19
+Z29 L0 963
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 n@logic_vlg_vec_tst
